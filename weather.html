@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="weather-app">
+        <header class="header">
+            <h1>Weather Dashboard</h1>
+            <p id="location">Detecting location...</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button onclick="getWeatherByCity()">Get Weather by City</button>
+            </div>
+            <div class="input-group">
+                <select id="city-select">
+                    <option value="London">London</option>
+                    <option value="New York">New York</option>
+                    <option value="Tokyo">Tokyo</option>
+                </select>
+                <button onclick="getWeatherByCitySelection()">Get Weather by Selection</button>
+            </div>
+            <div class="input-group">
+                <button onclick="getWeatherByLocation()">Get Weather by Location</button>
+            </div>
+        </div>
+
+        <div class="weather-info">
+            <div class="current-weather">
+                <h2>Current Weather</h2>
+                <div id="current-weather-data" class="fade-in">
+                    <p>Loading...</p>
+                </div>
+            </div>
+            <div class="forecast-weather">
+                <h2>5-Day Forecast</h2>
+                <div id="forecast-data" class="forecast-grid fade-in">
+                    <!-- Forecast items will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="weather-output"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
